@@ -1,23 +1,24 @@
-const aniodeNacimiento = prompt('ingrese su ano de nacimiento:');
-let edad = 2024 - aniodeNacimiento;
-if (edad < 18){
-   option = prompt('Usted es menor de edad, ingrese una opcion:  1. Jugos  2. Bebidas Energeticas  0. salir');
-if (option == 1){
-    alert("Jugo $500");
-} else if (option == 2){
-    alert("Bebidas energeticas $100 c/u");
+function edad (anioActual, anioDeNacimiento) {
+    resultado = anioActual - anioDeNacimiento
 }
-} else  if (edad >= 18)  {
- option = prompt('Usted es mayor de edad, ingrese una opcion:  1. Jugos  2. Bebidas Energeticas  3. Vodka  4. Whisky  0. salir ');
- if (option == 1){
-    alert("Jugo $500");
-} else if (option == 2){
-    alert("Bebidas energeticas $100 c/u");
-} else if( option == 3){
-    alert("Vodka $2000");
-} else if( option == 4){
-    alert("Whisky $7000")
-} else if (option == 0){
-    alert("Gracias por visitar nuestra paguina, Vuelva pronto!")
-} 
+edad ( 2024, prompt("ingrese su Ano de nacimiento")) 
+let edadPermitida = 18
+while ( resultado >= edadPermitida){
+    option = prompt ("eres mayor de 18, Ingrese una opcion: \n 1. Vodka \n 2. whisky \n 3.Gin \n 4. Fernet \n 0.salir");
+    if (option == 1){
+        alert("Vodka $3000");
+    }else if(option == 2){
+        alert("Whisky $7000");
+    }else if(option == 3){
+        alert("Gin $4000");
+    }else if(option == 4){
+        alert("Fernet $6000");
+    }else if(option == 0){
+        alert ("Gracias vuelva pronto");
+    }else {
+        alert("el valor ingresado no corresponde a nignuna opciona, Gracias")
+    }
+}
+while (resultado < edadPermitida){
+    alert("usted todavia no es mayor de edad, vuelva pronto")
 }
